@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Himanshu Yadav – Computer Science Engineering Student</title>
+<meta name="description" content="Portfolio of Himanshu Yadav: B.Tech CSE student with Flutter, Python, SQL and web development experience.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#f4f6fa;--surface:#ffffff;--ink:#0f1b2d;--muted:#51607a;--line:#d8dfeb;
+  --accent:#1c6ee0;--ok:#0b8f6a;--tint:#e8f0fd;
+  --sans:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;--mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0b111c;--surface:#111a2a;--ink:#e7ecf6;--muted:#93a1bb;--line:#233048;--accent:#5aa2ff;--ok:#3ddbb0;--tint:#14233d;
+}}
+:root[data-theme="dark"]{
+  --bg:#0b111c;--surface:#111a2a;--ink:#e7ecf6;--muted:#93a1bb;--line:#233048;--accent:#5aa2ff;--ok:#3ddbb0;--tint:#14233d;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 76px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16.5px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:11;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:62px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:600;text-decoration:none}
+.logo i{font:600 14px var(--mono);font-style:normal;background:var(--accent);color:var(--bg);border-radius:8px;padding:5px 8px}
+nav{display:flex;gap:22px;align-items:center}
+nav a{font:500 14px var(--mono);text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--accent)}
+#theme{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:8px;padding:6px 12px;font:500 13px var(--mono);cursor:pointer}
+@media(max-width:820px){nav a{display:none}}
+
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding:68px 0 48px}
+.status{display:inline-flex;align-items:center;gap:8px;font:500 13px var(--mono);color:var(--muted);border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:5px 14px;margin-bottom:22px}
+.status::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--ok)}
+h1{font:700 clamp(40px,6.4vw,68px)/1.04 var(--sans);letter-spacing:-.035em;margin:0 0 10px}
+.role{font:500 clamp(17px,2.2vw,21px)/1.4 var(--mono);color:var(--accent);margin:0 0 20px}
+.lead{color:var(--muted);font-size:18px;max-width:34em;margin:0 0 28px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:12px 22px;border-radius:10px;font:600 15px var(--sans);text-decoration:none;border:1px solid var(--accent);transition:transform .15s}
+.btn.main{background:var(--accent);color:var(--bg)}
+.btn.alt{border-color:var(--line);background:var(--surface)}
+.btn:hover{transform:translateY(-2px)}
+.term{background:#0a0f1a;color:#d9e2f2;border:1px solid #26334d;border-radius:12px;overflow:hidden;font:400 14.5px/1.85 var(--mono);box-shadow:0 22px 50px -26px rgba(20,60,160,.6)}
+.term .top{display:flex;align-items:center;gap:7px;padding:11px 14px;background:#121a2b;color:#8795b2;font-size:12.5px;border-bottom:1px solid #26334d}
+.term .top i{width:10px;height:10px;border-radius:50%;display:block}
+.term .top span{margin-left:8px}
+.out{padding:16px 18px 20px;overflow-x:auto}
+.out b{display:block;width:fit-content;max-width:64ch;overflow:hidden;white-space:pre;font-weight:400;animation:type .6s steps(30) both;animation-delay:calc(var(--i)*.55s + .3s)}
+.c{color:#6cb2ff}.m{color:#9aa9c6}.g{color:#4be0b6}
+.caret{display:inline-block;width:8px;height:1.05em;background:#4be0b6;vertical-align:-3px;animation:blink 1s steps(1) infinite}
+@keyframes type{from{max-width:0}to{max-width:64ch}}
+@keyframes blink{50%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.out b{animation:none}.caret{animation:none}html{scroll-behavior:auto}.btn{transition:none}}
+@media(max-width:880px){.hero{grid-template-columns:1fr;padding-top:42px}}
+
+.facts{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:12px;background:var(--surface);margin-bottom:24px}
+.facts div{padding:18px 20px;border-left:1px solid var(--line)}
+.facts div:first-child{border-left:0}
+.facts strong{display:block;font:600 22px var(--mono);letter-spacing:-.02em}
+.facts span{font-size:14px;color:var(--muted)}
+@media(max-width:760px){.facts{grid-template-columns:1fr 1fr}.facts div:nth-child(3){border-left:0}.facts div:nth-child(n+3){border-top:1px solid var(--line)}}
+
+section{display:grid;grid-template-columns:200px 1fr;gap:40px;padding:54px 0;border-top:1px solid var(--line)}
+h2{font:600 24px/1.2 var(--sans);letter-spacing:-.02em;margin:0;position:sticky;top:calc(env(safe-area-inset-top,0px) + 84px);align-self:start}
+h3{font:600 18px/1.35 var(--sans);margin:0 0 4px}
+p{margin:0 0 14px}
+.meta{color:var(--muted);font-size:14.5px;margin:0 0 12px}
+ul.pts{margin:0;padding-left:20px}
+ul.pts li{margin-bottom:8px}
+@media(max-width:760px){section{grid-template-columns:1fr;gap:16px;padding:38px 0}h2{position:static}}
+
+table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface)}
+.tw{overflow-x:auto;border-radius:12px}
+th,td{text-align:left;padding:14px 18px;border-bottom:1px solid var(--line);vertical-align:top;font-size:15.5px}
+tr:last-child th,tr:last-child td{border-bottom:0}
+th{width:170px;font-weight:600;color:var(--muted);background:var(--tint)}
+.tag{display:inline-block;font:500 13.5px var(--mono);padding:3px 10px;border-radius:6px;background:var(--tint);color:var(--accent);margin:2px 6px 2px 0;border:1px solid var(--line)}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:24px 26px}
+.date{display:inline-block;font:500 13px var(--mono);color:var(--ok);border:1px solid var(--line);border-radius:6px;padding:3px 10px;margin-bottom:12px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.proj .file{font:500 13px var(--mono);color:var(--muted);margin:0 0 14px;padding-bottom:12px;border-bottom:1px dashed var(--line)}
+.proj .tags{margin-top:16px}
+@media(max-width:860px){.grid2{grid-template-columns:1fr}}
+.edu{display:grid;gap:14px}
+.edu .card{display:grid;grid-template-columns:1fr auto;gap:6px 20px;align-items:start}
+.score{font:600 15px var(--mono);color:var(--accent);text-align:right}
+.edu h3,.edu .meta{margin:0}
+.certs{margin-top:20px;display:grid;gap:12px}
+@media(max-width:560px){.edu .card{grid-template-columns:1fr}.score{text-align:left}th{width:110px}}
+
+.contact{display:grid;gap:0;border:1px solid var(--line);border-radius:12px;background:var(--surface);overflow:hidden}
+.crow{display:grid;grid-template-columns:110px 1fr auto;gap:14px;align-items:center;padding:16px 20px;border-bottom:1px solid var(--line)}
+.crow:last-child{border-bottom:0}
+.crow dt{font:500 13.5px var(--mono);color:var(--muted)}
+.crow dd{margin:0;font-weight:600;word-break:break-word}
+.crow a{text-decoration:none;color:var(--accent)}
+.copy{border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:5px 12px;font:500 13px var(--mono);cursor:pointer}
+@media(max-width:560px){.crow{grid-template-columns:1fr auto}.crow dt{grid-column:1/-1}}
+footer{border-top:1px solid var(--line);padding:24px 0 36px;color:var(--muted);font:400 13.5px var(--mono)}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#top"><i>HY</i>Himanshu Yadav</a>
+    <nav aria-label="Main">
+      <a href="#skills">skills</a><a href="#experience">experience</a><a href="#projects">projects</a><a href="#education">education</a><a href="#contact">contact</a>
+      <button id="theme" type="button" aria-label="Switch colour theme">Theme</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+  <div class="hero">
+    <div>
+      <p class="status">Open to internships and entry-level roles</p>
+      <h1>Himanshu Yadav</h1>
+      <p class="role">B.Tech CSE · Flutter · Python · SQL</p>
+      <p class="lead">Computer Science Engineering student with hands-on Flutter experience, plus projects in responsive web design and SQL database management. I want to build real software in a team that values learning.</p>
+      <div class="btns">
+        <a class="btn main" href="#projects">View projects</a>
+        <a class="btn alt" href="#contact">Get in touch</a>
+        <a class="btn alt" href="https://github.com/himanshu25252525" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn alt" href="https://www.linkedin.com/in/himanshu-yadav-a673a5270" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="term" role="img" aria-label="Terminal summary: Himanshu Yadav, B.Tech CSE 2024 to 2027, CGPA 7.35, stack Flutter, Dart, Python, SQL, HTML, CSS, open to work">
+      <div class="top"><i style="background:#ff5f56"></i><i style="background:#ffbd2e"></i><i style="background:#27c93f"></i><span>himanshu@portfolio: ~</span></div>
+      <div class="out">
+        <b style="--i:0"><span class="g">$</span> <span class="c">whoami</span></b>
+        <b style="--i:1">himanshu-yadav</b>
+        <b style="--i:2"><span class="g">$</span> <span class="c">cat education.txt</span></b>
+        <b style="--i:3"><span class="m">B.Tech CSE, 2024–2027, CGPA 7.35</span></b>
+        <b style="--i:4"><span class="g">$</span> <span class="c">ls stack/</span></b>
+        <b style="--i:5">flutter  dart  python  sql  html  css</b>
+        <b style="--i:6"><span class="g">$</span> <span class="c">echo $STATUS</span></b>
+        <b style="--i:7">open to work<span class="caret"></span></b>
+      </div>
+    </div>
+  </div>
+
+  <div class="facts" aria-label="Key facts">
+    <div><strong>7.35</strong><span>B.Tech CGPA (out of 10)</span></div>
+    <div><strong>6 wks</strong><span>Flutter industrial training</span></div>
+    <div><strong>2</strong><span>Academic projects</span></div>
+    <div><strong>2</strong><span>Certifications</span></div>
+  </div>
+
+  <section id="skills">
+    <h2>Technical skills</h2>
+    <div class="tw"><table>
+      <tr><th>Languages</th><td><span class="tag">Python</span><span class="tag">Dart</span></td></tr>
+      <tr><th>Mobile</th><td><span class="tag">Flutter</span></td></tr>
+      <tr><th>Web</th><td><span class="tag">HTML</span><span class="tag">CSS</span></td></tr>
+      <tr><th>Database</th><td><span class="tag">SQL</span><span class="tag">MySQL</span></td></tr>
+      <tr><th>Tools</th><td><span class="tag">VS Code</span><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">Android Studio</span></td></tr>
+      <tr><th>Core skills</th><td>Web development, problem solving, leadership, task management</td></tr>
+    </table></div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="card">
+      <span class="date">Jul 2022 – Aug 2022</span>
+      <h3>Industrial Trainee – Flutter Mobile App Development</h3>
+      <p class="meta">New Age Solutions Technologies (NASTECH), India · 6-week programme</p>
+      <ul class="pts">
+        <li>Built cross-platform mobile applications with the Flutter framework and the Dart language.</li>
+        <li>Learned widget-based UI design, state management and app navigation.</li>
+        <li>Delivered mini projects that applied mobile UI/UX design and basic backend integration.</li>
+        <li>Certified: certificate no. NASTECH22048, issued 20 August 2022.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid2">
+      <article class="card proj">
+        <p class="file">portfolio-website/</p>
+        <h3>Portfolio Website</h3>
+        <p class="meta">Responsive front-end project</p>
+        <ul class="pts">
+          <li>Built a fully responsive personal site that shows projects, skills and achievements.</li>
+          <li>Applied clean UI/UX principles so the layout works across devices.</li>
+          <li>Structured it into About, Skills, Projects and Contact sections.</li>
+        </ul>
+        <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span></div>
+      </article>
+      <article class="card proj">
+        <p class="file">student-database-system/</p>
+        <h3>Student Database Management System</h3>
+        <p class="meta">SQL-based record management</p>
+        <ul class="pts">
+          <li>Designed a SQL system to manage student records with full CRUD operations.</li>
+          <li>Added validation checks to keep data accurate and block duplicate or incorrect entries.</li>
+        </ul>
+        <div class="tags"><span class="tag">SQL</span><span class="tag">MySQL</span><span class="tag">CRUD</span></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education and certifications</h2>
+    <div>
+      <div class="edu">
+        <div class="card"><h3>B.Tech, Computer Science Engineering</h3><span class="score">CGPA 7.35 / 10</span><p class="meta">Chhatrapati Shivaji Maharaj University</p><span class="meta score" style="color:var(--muted)">2024 – 2027</span></div>
+        <div class="card"><h3>Diploma, Computer Science Engineering</h3><span class="score">60%</span><p class="meta">Muchhala Polytechnic</p><span class="meta score" style="color:var(--muted)">2021 – 2023</span></div>
+      </div>
+      <div class="certs">
+        <div class="card"><h3>Mobile Application Development using Flutter</h3><p class="meta" style="margin:0">New Age Solutions Technologies (NASTECH) · August 2022</p></div>
+        <div class="card"><h3>Data Science Training Program</h3><p class="meta" style="margin:0">iNeuron</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div>
+      <p>I’m open to internships and entry-level software roles. Email is the quickest way to reach me.</p>
+      <dl class="contact" style="margin:0">
+        <div class="crow"><dt>email</dt><dd><a href="mailto:himanshuyadav4980409@gmail.com">himanshuyadav4980409@gmail.com</a></dd><button class="copy" type="button" data-copy="himanshuyadav4980409@gmail.com">Copy</button></div>
+        <div class="crow"><dt>phone</dt><dd><a href="tel:+918692077490">+91 86920 77490</a></dd><button class="copy" type="button" data-copy="+91 86920 77490">Copy</button></div>
+        <div class="crow"><dt>github</dt><dd><a href="https://github.com/himanshu25252525" target="_blank" rel="noopener">github.com/himanshu25252525</a></dd><button class="copy" type="button" data-copy="https://github.com/himanshu25252525">Copy</button></div>
+        <div class="crow"><dt>linkedin</dt><dd><a href="https://www.linkedin.com/in/himanshu-yadav-a673a5270" target="_blank" rel="noopener">linkedin.com/in/himanshu-yadav-a673a5270</a></dd><button class="copy" type="button" data-copy="https://www.linkedin.com/in/himanshu-yadav-a673a5270">Copy</button></div>
+        <div class="crow"><dt>location</dt><dd>Thane, Maharashtra, India</dd><span></span></div>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">© 2026 Himanshu Yadav</div></footer>
+
+<script>
+(function(){
+  var root=document.documentElement,btn=document.getElementById("theme");
+  var dark=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;
+  try{var s=localStorage.getItem("theme");if(s==="dark"||s==="light"){root.setAttribute("data-theme",s);dark=s==="dark";}}catch(e){}
+  function label(){btn.textContent=dark?"Light mode":"Dark mode";}
+  label();
+  btn.addEventListener("click",function(){
+    dark=!dark;var v=dark?"dark":"light";
+    root.setAttribute("data-theme",v);
+    try{localStorage.setItem("theme",v);}catch(e){}
+    label();
+  });
+  document.querySelectorAll(".copy").forEach(function(b){
+    b.addEventListener("click",function(){
+      var t=b.getAttribute("data-copy");
+      function done(ok){b.textContent=ok?"Copied":"Select text";setTimeout(function(){b.textContent="Copy";},1500);}
+      try{navigator.clipboard.writeText(t).then(function(){done(true);},function(){done(false);});}catch(e){done(false);}
+    });
+  });
+})();
+</script>
+</body>
+</html>
